@@ -566,19 +566,24 @@ export default function InvoicesPage() {
                             inputProps={{ "aria-label": "Vehicle number" }}
                           />
                         </TableCell>
-                        <TableCell align="right" sx={{ minWidth: 125 }}>
+                        <TableCell align="right" sx={{ minWidth: 180 }}>
                           <TextField
                             fullWidth
                             size="small"
                             type="number"
                             value={item.quantity}
                             onChange={(event) => updateItem(index, "quantity", event.target.value)}
+                            sx={{ "& .MuiInputBase-input": { minWidth: 56 } }}
                             InputProps={{
                               endAdornment: (
                                 <InputAdornment position="end">{item.unit}</InputAdornment>
                               ),
                             }}
-                            inputProps={{ min: 0.001, step: "0.001" }}
+                            inputProps={{
+                              min: 0.001,
+                              step: "0.001",
+                              "aria-label": `Quantity in ${item.unit}`,
+                            }}
                             required
                           />
                         </TableCell>

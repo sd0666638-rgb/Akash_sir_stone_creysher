@@ -37,8 +37,8 @@ import MetricCard from "../components/MetricCard.jsx";
 const reportTabs = [
   { key: "sales", label: "Sales", path: "/reports/sales" },
   { key: "payments", label: "Collections", path: "/reports/payments" },
-  { key: "outstanding", label: "Outstanding", path: "/reports/outstanding", exportable: true },
-  { key: "ageing", label: "Ageing", path: "/reports/ageing", exportable: true },
+  { key: "outstanding", label: "Outstanding", path: "/reports/outstanding" },
+  { key: "ageing", label: "Ageing", path: "/reports/ageing" },
   { key: "advances", label: "Advances", path: "/reports/advances" },
   { key: "gst", label: "GST", path: "/reports/gst" },
   { key: "cheques", label: "Cheques", path: "/reports/cheques" },
@@ -110,14 +110,30 @@ export default function ReportsPage() {
           </Typography>
         </Box>
         <Box className="table-actions">
-          {view === "tables" && activeReport.exportable ? (
-            <Button
-              variant="outlined"
-              startIcon={<Download size={18} />}
-              onClick={() => downloadBlob(`${activeReport.path}?export=excel`, `${activeReport.key}.xlsx`)}
-            >
-              Excel
-            </Button>
+          {view === "tables" ? (
+            <>
+              <Button
+                variant="outlined"
+                startIcon={<Download size={18} />}
+                onClick={() =>
+                  downloadBlob(
+                    `${activeReport.path}?export=excel`,
+                    `${activeReport.key}.xlsx`
+                  )
+                }
+              >
+                Excel
+              </Button>
+              <Button
+                variant="outlined"
+                startIcon={<Download size={18} />}
+                onClick={() =>
+                  downloadBlob(`${activeReport.path}?export=csv`, `${activeReport.key}.csv`)
+                }
+              >
+                CSV
+              </Button>
+            </>
           ) : null}
           <Button variant="outlined" startIcon={<RefreshCw size={18} />} onClick={refresh}>
             Refresh
