@@ -1,0 +1,465 @@
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f6f8f7;
+}
+
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 85% 0%, rgba(220, 239, 233, 0.72), transparent 26rem),
+    #f6f8f7;
+}
+
+.topbar {
+  border-bottom: 1px solid #e3e9e7;
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(14px);
+}
+
+.drawer-content {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  color: #d8e6e2;
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, 0.035), transparent 42%),
+    #123c34;
+}
+
+.brand-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 72px;
+  padding: 14px 18px;
+}
+
+.brand-block--collapsed {
+  justify-content: center;
+  padding-inline: 10px;
+}
+
+.brand-mark {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.drawer-content .MuiDivider-root {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-list .MuiListItemButton-root {
+  min-height: 46px;
+  margin: 5px 10px;
+  border-radius: 10px;
+  color: #c6d8d3;
+}
+
+.nav-list .MuiListItemIcon-root {
+  min-width: 40px;
+  color: #a9c7bf;
+}
+
+.nav-list .MuiListItemButton-root.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.nav-list .MuiListItemButton-root.active .MuiListItemIcon-root {
+  color: #8fe0c8;
+}
+
+.nav-list .MuiListItemButton-root:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.main-panel {
+  flex-grow: 1;
+  width: 100%;
+  min-width: 0;
+  padding: 26px 30px 48px;
+}
+
+.main-panel > .MuiToolbar-root + * {
+  width: min(100%, 1580px);
+  margin-inline: auto;
+}
+
+.login-screen {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(84, 174, 148, 0.3), transparent 32rem),
+    radial-gradient(circle at 90% 85%, rgba(212, 107, 59, 0.16), transparent 28rem),
+    #edf4f1;
+  padding: 24px;
+}
+
+.login-panel {
+  width: min(100%, 420px);
+  padding: 36px;
+  border: 1px solid #dce6e2;
+  border-radius: 18px !important;
+  box-shadow: 0 24px 70px rgba(23, 71, 59, 0.12) !important;
+}
+
+.login-brand-mark {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  color: #ffffff;
+  background: #176b5b;
+  box-shadow: 0 10px 24px rgba(23, 107, 91, 0.22);
+}
+
+.metric-card {
+  min-height: 126px;
+}
+
+.metric-card__header,
+.inline-row,
+.bar-row,
+.page-header,
+.table-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.page-header {
+  min-height: 58px;
+}
+
+.page-header h1,
+.page-header h2,
+.page-header h4 {
+  color: #172622;
+}
+
+.page-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.inline-row {
+  min-height: 48px;
+  padding: 8px 0;
+  border-bottom: 1px solid #edf1ef;
+}
+
+.bar-track {
+  height: 8px;
+  border-radius: 999px;
+  background: #edf1ef;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #234a57, #24744d);
+}
+
+.summary-panel {
+  border: 1px solid #dce7e3;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #f7fbf9, #eef7f3);
+  padding: 18px;
+}
+
+.summary-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.summary-strip span {
+  display: grid;
+  gap: 3px;
+  border: 1px solid #dfe8e5;
+  border-radius: 10px;
+  background: #fbfcfc;
+  padding: 11px 13px;
+  min-height: 44px;
+}
+
+.summary-strip span small {
+  color: #6a7773;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.span-3 {
+  grid-column: span 3;
+}
+
+.span-4 {
+  grid-column: span 4;
+}
+
+.span-6 {
+  grid-column: span 6;
+}
+
+.span-8 {
+  grid-column: span 8;
+}
+
+.span-12 {
+  grid-column: span 12;
+}
+
+.fixed-table {
+  table-layout: fixed;
+}
+
+.card-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.section-heading {
+  margin-bottom: 14px;
+  color: #50605b;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+.empty-state {
+  display: grid;
+  min-height: 180px;
+  place-items: center;
+  padding: 28px;
+  color: #6c7975;
+  text-align: center;
+}
+
+.empty-state svg {
+  margin-bottom: 10px;
+  color: #95a7a1;
+}
+
+.table-row-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.payment-balance {
+  border-left: 4px solid #176b5b;
+}
+
+.invoice-option-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.muted-surface {
+  border: 1px solid #e3e9e7;
+  border-radius: 12px;
+  background: #fafcfb;
+  padding: 18px;
+}
+
+.invoice-items-table .MuiTextField-root {
+  min-width: 88px;
+}
+
+.customer-picker-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+}
+
+.customer-add-button {
+  width: 48px;
+  height: 56px;
+  flex: 0 0 48px;
+  border: 1px solid #b7d3ca !important;
+  border-radius: 10px !important;
+  background: #edf7f3 !important;
+}
+
+.dialog-icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  place-items: center;
+  border-radius: 10px;
+  color: #176b5b;
+  background: #dcefe9;
+}
+
+.settings-card {
+  width: min(100%, 1040px);
+}
+
+.settings-section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.settings-section-title--actions {
+  justify-content: space-between;
+}
+
+.settings-section-title__copy,
+.settings-dialog-title,
+.user-account-identity,
+.user-account-roles {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.settings-save-row {
+  display: flex;
+  width: min(100%, 1040px);
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 2px;
+}
+
+.user-account-list {
+  overflow: hidden;
+  border: 1px solid #e1e8e6;
+  border-radius: 12px;
+}
+
+.user-account-row {
+  display: flex;
+  min-height: 74px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 12px 15px;
+  border-bottom: 1px solid #e8edeb;
+}
+
+.user-account-row:last-child {
+  border-bottom: 0;
+}
+
+.user-account-avatar {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  place-items: center;
+  border-radius: 11px;
+  color: #176b5b;
+  background: #dcefe9;
+  font-size: 0.8rem;
+  font-weight: 850;
+}
+
+.user-account-roles {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+@media (max-width: 900px) {
+  .main-panel {
+    padding: 16px;
+  }
+
+  .page-header,
+  .table-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .span-2,
+  .span-3,
+  .span-4,
+  .span-6,
+  .span-8,
+  .span-12 {
+    grid-column: span 12;
+  }
+
+  .summary-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .page-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .card-title-row {
+    flex-direction: column;
+  }
+
+  .settings-save-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .settings-section-title--actions,
+  .user-account-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .user-account-roles {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-panel {
+    padding: 26px 22px;
+  }
+
+  .main-panel {
+    padding-inline: 12px;
+  }
+}

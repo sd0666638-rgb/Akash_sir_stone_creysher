@@ -1,0 +1,17 @@
+.env
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.pyc
+node_modules/
+dist/
+build/
+.DS_Store
+*.log
+*.db
+*.sqlite
+mysql_data/
+.stone-runtime/
